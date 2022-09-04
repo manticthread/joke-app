@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #031628;
+  color: #fff;
+}
+.joke-app {
+  margin: auto;
+  text-align: center;
+  max-width: 1000px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.joke-header {
+  margin: auto;
+  border-bottom: #eee 2px solid;
+  width: 800px;
+  display: grid;
+  font-size: calc(10px + 2vmin);
+}
+@media (max-width: 600px) {
+  .joke-app {
+    max-width: 300px;
+  }
+  .joke-header {
+    width: 300px;
+  }
+  .joke-btn {
+    padding: 1.8em 2.7em;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 600px) {
+  .joke-app {
+    max-width: 600px;
+  }
+  .joke-header {
+    width: 600px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .joke-btn {
+    padding: 1.2em 2.3em;
+    font-size: 1.7rem;
+  }
+  .joke-get-button {
+    align-self: center;
+  }
+}
+
+@media (min-width: 960px) {
+  .joke-app {
+    max-width: 1000px;
+  }
+  .joke-header {
+    width: 800px;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .joke-btn {
+    padding: 1.2em 2.8em;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+.joke-main {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+}
+
+.joke-link {
+  margin-top: 40px;
+}
+.joke-link a {
+  color: #fff;
+}
+.joke-link a:hover {
+  color: #4cc9f0;
+}
+.joke-setup {
+  font-size: 25px;
+  margin-right: 100px;
+  margin-top: 20px;
+}
+.joke-get-button {
+  width: 300px;
+  align-self: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.joke-punchline-hide {
+  height: 50px;
+  width: 500px;
+  display: none;
+  margin-left: 400px;
+  align-items: right;
+
+  justify-content: right;
+}
+.joke-punchline-show {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+
+  align-items: right;
+  justify-content: right;
+}
+.joke-btn {
+  --color: #19bc8b;
+  --hover: #1973bc;
+  --text-color: #4cc9f0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  appearance: none;
+  border: 1px solid;
+  background-color: transparent;
+  text-transform: uppercase;
+  border-radius: 0.6em;
+  color: var(--text-color);
+  cursor: pointer;
+  align-self: center;
+  line-height: 1;
+
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+
+.joke-btn:hover {
+  box-shadow: 0 0 0 0 var(--hover), inset 1em 0.3em 0 0 var(--hover);
+}
